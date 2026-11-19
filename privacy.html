@@ -16,7 +16,7 @@
   <p>BilginKupu Yayın Aracı ("Araç"), BilginKupu kanal ekibinin kendi ürettiği videoları yalnızca kendi YouTube kanalına yüklemek için kullandığı dahili bir yazılımdır. Herkese açık bir hizmet değildir ve başka kullanıcılar tarafından kullanılmaz.</p>
 
   <h2>Hangi Google verilerine erişiyoruz?</h2>
-  <p>Araç, YouTube API Hizmetlerini kullanır. Kanal sahibi Google üzerinden izin verdiğinde Araç yalnızca <code>https://www.googleapis.com/auth/youtube.upload</code> kapsamını ister. Bu izin, kanala video yüklemeye ve yüklenen videonun başlık, açıklama ve etiket bilgilerini ayarlamaya yeter.</p>
+  <p>Araç, YouTube API Hizmetlerini kullanır. Kanal sahibi Google üzerinden izin verdiğinde Araç yalnızca iki kapsam ister: <code>https://www.googleapis.com/auth/youtube.upload</code> (kanala video yüklemek ve yüklenen videonun başlık, açıklama ve etiketlerini ayarlamak için) ve <code>https://www.googleapis.com/auth/youtube.readonly</code> (yalnızca yüklemenin doğru kanala yapıldığını doğrulamak için kanal adını okumak amacıyla).</p>
   <ul>
     <li>Araç, kanalın izleyici verilerine, yorumlarına, aboneliklerine veya diğer hesap bilgilerine erişmez.</li>
     <li>Saklanan tek bilgi, Google'ın verdiği yetkilendirme belirtecidir (OAuth refresh token). Bu belirteç yalnızca Aracın çalıştığı ortamın gizli ayarlarında tutulur.</li>
@@ -41,7 +41,7 @@
   <hr>
   <h2>Privacy Policy (English)</h2>
   <p><strong>BilginKupu Publisher</strong> is an internal tool used only by the BilginKupu channel team to upload the channel's own videos to its own YouTube channel. It is not offered to the public.</p>
-  <p><strong>Data accessed.</strong> The tool uses YouTube API Services and requests only the <code>youtube.upload</code> scope, with the channel owner's consent. It does not access audience data, comments, subscriptions or any other account information. The only data stored is the OAuth refresh token, kept in the tool's private configuration, and a local log of uploaded video IDs.</p>
+  <p><strong>Data accessed.</strong> The tool uses YouTube API Services and requests only the <code>youtube.upload</code> scope (to upload videos and set their title, description and tags) and the <code>youtube.readonly</code> scope (only to read the channel name and confirm uploads go to the right channel), with the channel owner's consent. It does not access audience data, comments, subscriptions or any other account information. The only data stored is the OAuth refresh token, kept in the tool's private configuration, and a local log of uploaded video IDs.</p>
   <p><strong>Use and sharing.</strong> Data is used solely to upload the channel's own videos. Nothing is sold, used for advertising or shared with third parties. Use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
   <p><strong>Revoking access.</strong> Access can be revoked at any time at <a href="https://security.google.com/settings/security/permissions">Google security settings</a>. Revoked tokens become invalid and are deleted from the tool's configuration.</p>
   <p>By using the tool you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. See also the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Contact: <a href="mailto:bilginkupuseninle@gmail.com">bilginkupuseninle@gmail.com</a>.</p>
